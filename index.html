@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор Візитних Карток</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор Візитних Карток</h1>
+        <form id="cardForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name">
+            <small class="error" id="nameError"></small>
+            
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname">
+            <small class="error" id="surnameError"></small>
+
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" name="phone">
+            <small class="error" id="phoneError"></small>
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email">
+            <small class="error" id="emailError"></small>
+
+            <label for="age">Вік:</label>
+            <input type="number" id="age" name="age">
+            <small class="error" id="ageError"></small>
+
+            <label for="about">Коротко про себе (до 120 символів):</label>
+            <textarea id="about" name="about" maxlength="120"></textarea>
+
+            <label for="position">Посада:</label>
+            <select id="position" name="position">
+                <option value="manager">Менеджер</option>
+                <option value="developer">Розробник</option>
+                <option value="designer">Дизайнер</option>
+                <option value="analyst">Аналітик</option>
+                <option value="marketer">Маркетолог</option>
+            </select>
+
+            <label for="department">Відділ:</label>
+            <select id="department" name="department">
+                <option value="it">ІТ</option>
+                <option value="hr">HR</option>
+                <option value="sales">Продажі</option>
+                <option value="finance">Фінанси</option>
+                <option value="marketing">Маркетинг</option>
+            </select>
+
+            <label for="template">Шаблон:</label>
+            <select id="template" name="template" onchange="showTemplatePreview()">
+                <option value="template1">Шаблон 1</option>
+                <option value="template2">Шаблон 2</option>
+                <option value="template3">Шаблон 3</option>
+                <option value="template4">Шаблон 4</option>
+                <option value="template5">Шаблон 5</option>
+                <option value="template6">Шаблон 6</option>
+                <option value="template7">Шаблон 7</option>
+                <option value="template8">Шаблон 8</option>
+                <option value="template9">Шаблон 9</option>
+                <option value="template10">Шаблон 10</option>
+            </select>
+
+            <button type="button" onclick="generateCard()">Генерувати</button>
+        </form>
+
+        <div id="cardPreview" class="card-preview"></div>
+
+        <button id="editBtn" style="display: none;" onclick="enableEditing()">Редагувати</button>
+        <button id="downloadBtn" style="display: none;" onclick="downloadCard()">Завантажити</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
