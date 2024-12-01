@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 60px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.card-template {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.card-template .card-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card-template .card-body {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+
+.card-template.template1 {
+    border: 1px solid #333;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+.card-template.template2 {
+    border: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+.card-template.template3 {
+    border: none;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-template.template4 {
+    border: 2px dashed #c47f2e;
+    padding: 15px;
+    background-color: #fffbea;
+    color: #4d2c1f;
+    font-family: 'Courier New', monospace;
+}
+
+.card-template.template5 {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.card-template.template6 {
+    border: 2px solid #3c763d;
+    padding: 15px;
+    background-color: #eafaf1;
+    color: #3c763d;
+    font-family: 'Georgia', serif;
+}
+
+.card-template.template7 {
+    border: 1px solid #444;
+    padding: 20px;
+    background: linear-gradient(45deg, #444, #222);
+    color: #bbb;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+}
+
+.card-template.template8 {
+    border: 1px solid #007bff;
+    padding: 20px;
+    background-color: #eef7ff;
+    color: #007bff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-template.template9 {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #333;
+}
+
+.card-template.template10 {
+    border: 1px solid #000;
+    padding: 20px;
+    color: red;
+    background: linear-gradient(180deg, #444, #222);
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#editBtn {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+#downloadBtn {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+#templatePreview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
