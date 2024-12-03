@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
-const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+const html = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf8');
 let dom;
 let document;
 
@@ -13,7 +13,7 @@ describe('generateCard', () => {
   });
 
   it('should display error messages for empty required fields', () => {
-    const generateCard = require('../scripts.js').generateCard;
+    const generateCard = require('scripts.js').generateCard;
     generateCard();
 
     const nameError = document.getElementById('nameError').textContent;
@@ -27,7 +27,7 @@ describe('generateCard', () => {
     document.getElementById('email').value = 'john.doe@example.com';
     document.getElementById('age').value = '25';
 
-    const generateCard = require('../scripts.js').generateCard;
+    const generateCard = require('scripts.js').generateCard;
     generateCard();
 
     const cardContent = document.getElementById('cardPreview').innerHTML;
