@@ -1,5 +1,7 @@
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
-function generateCard() {
+export function generateCard() {
     const name = document.getElementById('name').value.trim();
     const surname = document.getElementById('surname').value.trim();
     const phone = document.getElementById('phone').value.trim();
@@ -38,7 +40,23 @@ function generateCard() {
 
     if (!valid) return;
 
-    let cardHTML = generateTemplateHTML(name, surname, phone, email, age, position, department, about, template);
+    const positionText = {
+        manager: 'Менеджер',
+        developer: 'Розробник',
+        designer: 'Дизайнер',
+        analyst: 'Аналітик',
+        marketer: 'Маркетолог'
+    }[position];
+
+    const departmentText = {
+        it: 'ІТ',
+        hr: 'HR',
+        sales: 'Продажі',
+        finance: 'Фінанси',
+        marketing: 'Маркетинг'
+    }[department];
+
+    let cardHTML = generateTemplateHTML(name, surname, phone, email, age, positionText, departmentText, about, template);
 
     const cardPreview = document.getElementById('cardPreview');
     cardPreview.innerHTML = cardHTML;
@@ -47,7 +65,7 @@ function generateCard() {
     document.getElementById('downloadBtn').style.display = 'block';
 }
 
-function showTemplatePreview() {
+export function showTemplatePreview() {
     const template = document.getElementById('template').value;
     const cardPreview = document.getElementById('cardPreview');
 
@@ -56,7 +74,7 @@ function showTemplatePreview() {
     cardPreview.innerHTML = placeholderHTML;
 }
 
-function generateTemplateHTML(name, surname, phone, email, age, position, department, about, template) {
+export function generateTemplateHTML(name, surname, phone, email, age, position, department, about, template) {
     return `
         <div class="card-template ${template}">
             <div class="card-header">
@@ -73,13 +91,12 @@ function generateTemplateHTML(name, surname, phone, email, age, position, depart
     `;
 }
 
-function enableEditing() {
+export function enableEditing() {
     const cardTemplate = document.querySelector('.card-template');
     cardTemplate.setAttribute('contenteditable', 'true');
 }
 
-
-function downloadCard() {
+export function downloadCard() {
     const cardPreview = document.getElementById('cardPreview');
 
     html2canvas(cardPreview, {
@@ -87,7 +104,7 @@ function downloadCard() {
         useCORS: true
     }).then((canvas) => {
         const imgData = canvas.toDataURL('image/png'); 
-        const doc = new jspdf.jsPDF('portrait', 'mm', 'a4');
+        const doc = new jsPDF('portrait', 'mm', 'a4');
 
         const cardWidth = 50; // Ширина візитки 
         const cardHeight = 30; // Висота візитки 
