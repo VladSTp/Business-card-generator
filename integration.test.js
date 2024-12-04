@@ -15,7 +15,6 @@ describe('Інтеграційне тестування веб-додатку г
     });
 
     test('Тест-кейс 1: Перевірка правильності відображення введених даних на візитівці', async () => {
-        // Заповнення форми
         await page.type('#name', 'Іван');
         await page.type('#surname', 'Іваненко');
         await page.type('#phone', '+380123456789');
@@ -23,11 +22,8 @@ describe('Інтеграційне тестування веб-додатку г
         await page.type('#age', '30');
         await page.select('#position', 'Менеджер');
         await page.select('#department', 'Продажі');
-
-        // Натискання кнопки "Згенерувати візитівку"
         await page.click('button[onclick="generateCard()"]');
 
-        // Очікуваний результат
         const cardPreviewContent = await page.$eval('#cardPreview', el => el.textContent);
         expect(cardPreviewContent).toContain('Іван Іваненко');
         expect(cardPreviewContent).toContain('Менеджер | Продажі');
@@ -37,22 +33,17 @@ describe('Інтеграційне тестування веб-додатку г
     });
 
     test('Тест-кейс 2: Перевірка повідомлення про помилку для обов’язкових полів', async () => {
-        // Заповнення форми, крім поля "Ім'я"
         await page.type('#surname', 'Іваненко');
         await page.type('#phone', '+380123456789');
         await page.type('#email', 'ivan@example.com');
         await page.type('#age', '30');
         await page.select('#position', 'Менеджер');
         await page.select('#department', 'Продажі');
-
-        // Натискання кнопки "Згенерувати візитівку"
         await page.click('button[onclick="generateCard()"]');
 
-        // Очікуваний результат
         const nameError = await page.$eval('#nameError', el => el.textContent);
         expect(nameError).toBe('Це поле обов’язкове');
-
-        // Перевірка, що візитівка не згенерована
+        
         const cardPreviewContent = await page.$eval('#cardPreview', el => el.textContent);
         expect(cardPreviewContent).toBe('');
     });
