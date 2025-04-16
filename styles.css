@@ -214,3 +214,87 @@ button:hover {
         padding: 15px;
     }
 }
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container */
+main {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+  margin-top: 30px;
+  color: #006699;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs and Lists */
+p, li {
+  margin-bottom: 10px;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Contact block */
+#contacts p {
+  margin-bottom: 5px;
+}
+
+/* Links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
