@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генератор Візитних Карток</title>
+    <!-- SEO -->
+    <meta name="description" content="Презентація бакалаврської роботи. Сайт містить опис теми, мету дослідження, результати та контактну інформацію.">
+    <meta name="keywords" content="бакалаврська робота, дослідження, університет, landing page, проект">
+    <meta name="author" content="Vlad Steblovtsev">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Презентація бакалаврської роботи" />
+    <meta property="og:description" content="Детальний опис бакалаврського дослідження, результати та контакти." />
+    <meta property="og:image" content="https://VladSTp.github.io/bachelor-landing/og-image.jpg" />
+    <meta property="og:url" content="https://VladSTp.github.io/bachelor-landing/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Accessibility -->
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header role="banner">
+    <h2 itemprop="name">Бакалаврська робота</h2>
+    <p itemprop="description">Цей сайт представляє мою бакалаврську роботу. Ознайомтесь із цілями, завданнями та результатами дослідження.</p>
+  </header>
+
+  <main role="main">
+    <section aria-labelledby="about">
+      <h2 id="about">Про роботу</h2>
+      <p>Цей сайт створений як частина презентації бакалаврського дослідження.</p>
+    </section>
+
+    <section aria-labelledby="goal">
+      <h2 id="goal">Мета дослідження</h2>
+      <p>Ознайомити відвідувачів з основною метою і завданнями мого проекту.</p>
+    </section>
+  </main>
     <div class="container">
         <h1>Генератор Візитних Карток</h1>
         <form id="cardForm">
@@ -74,10 +106,17 @@
         <button id="editBtn" style="display: none;" onclick="enableEditing()">Редагувати</button>
         <button id="downloadBtn" style="display: none;" onclick="downloadCard()">Завантажити</button>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
+      
+  <footer role="contentinfo">
+    <p>Графічне представлення результатів дослідження</p>
+    <img src="og-image.jpg" alt="Графічне представлення результатів дослідження">
+    <p>© 2025 Vlad Steblovtsev. Всі права захищено.</p>
+  </footer>
 </body>
+    
 </html>
