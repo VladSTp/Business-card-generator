@@ -1,3 +1,9 @@
+* {
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -9,6 +15,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     overflow-y: auto;
+    color: #333; 
+    line-height: 1.6;
+    transition: background-color 0.3s ease; 
 }
 
 .container {
