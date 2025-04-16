@@ -5,10 +5,13 @@ body {
     padding: 20px;
     min-height: 100vh;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow-y: auto;
+    color: #333; 
+    flex-direction: row;
+    line-height: 1.6;
+    transition: background-color 0.3s ease; 
 }
 
 .container {
