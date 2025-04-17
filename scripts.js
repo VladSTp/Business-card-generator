@@ -1,5 +1,4 @@
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+
 
 export function generateCard() {
     const name = document.getElementById('name').value.trim();
