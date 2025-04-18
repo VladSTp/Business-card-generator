@@ -90,3 +90,94 @@ function generateTemplateHTML(name, surname, phone, email, age, position, depart
 
 Після документування коду у форматі JSDoc, згенеруйте документацію:
 	npm run docs
+
+
+
+## Архітектура проєкту
+
+Проєкт має просту односторінкову архітектуру (SPA), реалізовану на HTML, CSS і JavaScript (без бекенда). Документація згенерована за допомогою JSDoc та розгорнута через GitHub Pages.
+
+Компоненти:
+
+Веб-сервер: GitHub Pages (розгортання)
+Application Server: не використовується (усе в браузері)
+СУБД: не використовується
+Файлове сховище: локальна система користувача (скачування PDF/HTML)
+Кешування: не використовується
+Інші: Jest — для тестування, JSDoc — для документації
+
+
+## Інструкція для розробника
+
+### Необхідні залежності
+
+- Node.js (версія 18 або вище)
+- Git
+- Браузер
+
+### Покрокова інструкція
+
+1. Клонування репозиторію:
+
+```
+git clone https://github.com/VladSTp/Business-card-generator.git
+cd Business-card-generator
+```
+
+2. Встановлення залежностей:
+
+```
+npm install
+```
+
+3. Запуск у режимі розробки:
+
+```
+npm run dev
+```
+
+4. Запуск тестів:
+
+```
+npm test
+```
+
+5. Генерація документації:
+
+```
+npm run docs
+```
+
+Документацію буде згенеровано у папку `./docs`, і вона автоматично розгортається на GitHub Pages:  
+[Документація онлайн](https://vladstp.github.io/Business-card-generator/)
+
+## Базові команди
+
+`npm install` - Встановлення всіх залежностей 
+`npm run dev` - Запуск локального середовища розробки (Vite) 
+`npm test` - Юніт-тести за допомогою Jest  
+`npm run docs` - Генерація документації через JSDoc
+`npm run build` - Збірка проєкту для production
+
+## Структура проєкту
+
+```
+Business-card-generator/
+public/
+src/
+	styles/
+		scripts.js
+tests/
+	scripts.test.js
+docs/          
+	README.md
+	package.json
+	jsdoc.json        
+```
+
+## Ліцензія
+
+Проєкт розповсюджується під MIT ліцензією. Ви можете вільно використовувати, модифікувати та поширювати цей код.
+
+Автор: VladSTp  
+Репозиторій: [Business-card-generator](https://github.com/VladSTp/Business-card-generator)
