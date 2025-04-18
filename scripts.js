@@ -1,6 +1,11 @@
-import html2canvas from "html2canvas";
-
-
+/**
+ * Генерує візитку на основі введених даних.
+ * 
+ * Ця функція збирає дані з форми, перевіряє їх на коректність, і якщо вони валідні,
+ * генерує HTML-код візитки, який відображається в попередньому перегляді.
+ * 
+ * @returns {void} Функція не повертає значення.
+ */
 function generateCard() {
     const name = document.getElementById("name").value.trim();
     const surname = document.getElementById("surname").value.trim();
@@ -49,6 +54,14 @@ function generateCard() {
     document.getElementById("downloadBtn").style.display = "block";
 }
 
+/**
+ * Показує попередній перегляд шаблону візитки.
+ * 
+ * Ця функція створює шаблон для попереднього перегляду візитки з дефолтними даними.
+ * Вона заповнює елементи попереднього перегляду за допомогою шаблону, обраного користувачем.
+ * 
+ * @returns {void} Функція не повертає значення.
+ */
 function showTemplatePreview() {
     const template = document.getElementById("template").value;
     const cardPreview = document.getElementById("cardPreview");
@@ -58,6 +71,21 @@ function showTemplatePreview() {
     cardPreview.innerHTML = placeholderHTML;
 }
 
+/**
+ * Генерує HTML-код візитки на основі введених даних та вибраного шаблону.
+ * 
+ * @param {string} name - Ім'я особи для візитки.
+ * @param {string} surname - Прізвище особи для візитки.
+ * @param {string} phone - Телефонний номер.
+ * @param {string} email - Електронна пошта.
+ * @param {string} age - Вік особи.
+ * @param {string} position - Посада.
+ * @param {string} department - Відділ.
+ * @param {string} about - Опис (про себе).
+ * @param {string} template - Шаблон для візитки.
+ * 
+ * @returns {string} HTML-код для відображення візитки.
+ */
 function generateTemplateHTML(name, surname, phone, email, age, position, department, about, template) {
     return `
         <div class="card-template ${template}">
@@ -75,12 +103,27 @@ function generateTemplateHTML(name, surname, phone, email, age, position, depart
     `;
 }
 
+/**
+ * Дозволяє редагувати візитку безпосередньо на сторінці.
+ * 
+ * Ця функція додає можливість редагування візитки за допомогою атрибута `contenteditable`.
+ * Вона надає користувачеві можливість редагувати візитку безпосередньо в браузері.
+ * 
+ * @returns {void} Функція не повертає значення.
+ */
 function enableEditing() {
     const cardTemplate = document.querySelector(".card-template");
     cardTemplate.setAttribute("contenteditable", "true");
 }
 
-
+/**
+ * Завантажує візитку як PDF.
+ * 
+ * Ця функція створює PDF-файл на основі відображеної візитки. Візитка спочатку рендериться на канвасі,
+ * потім конвертується у формат PNG і додається в PDF-файл, який можна завантажити.
+ * 
+ * @returns {void} Функція не повертає значення.
+ */
 function downloadCard() {
     const cardPreview = document.getElementById("cardPreview");
 
@@ -110,4 +153,3 @@ function downloadCard() {
         doc.save("business_cards.pdf");
     });
 }
-
