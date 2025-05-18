@@ -22,7 +22,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="src\styles\styles.css">
+    <link rel="stylesheet" href="src\styles\styles-card-template.css">  
     <link rel="icon" href="src\images\favicon.ico" type="image/x-icon" />
+
 </head>
 <body>
   <header role="banner">
@@ -141,7 +143,14 @@
             </select>
 
             <label for="cardCount">Кількість візиток:</label>
-            <input type="number" id="cardCount" name="cardCount" value="9" min="1" max="100">
+            <input type="number" id="cardCount" name="cardCount" value="9" min="1" max="1000">
+
+            <label for="cardSizes">Оберіть розміри візиток:</label>
+            <select id="cardSizes">
+              <option value="small">Малий (60x30 мм)</option>
+              <option value="medium">Середній (90x50 мм)</option>
+              <option value="large">Великий (100x70 мм)</option>
+            </select>
 
             <button type="button" onclick="generateCard()">Генерувати</button>
         </form>
@@ -167,7 +176,7 @@
     <p><strong>ПІБ:</strong> Стебловцев Владислав</p>
     <p><strong>Email:</strong> vladiksteblovtsev@gmail.com</p>
     <p><strong>Telegram:</strong> @vlad_st_e</p>
-    <p><strong>Посилання на повний текст:</strong> <a href="https://drive.google.com/drive/folders/1fEh7r93YifFRU3l93fywlnsInYL00vWC" target="_blank">Читати роботу</a></p>
+    <p><strong>Посилання на повний текст:</strong> <a href="https://drive.google.com/drive/folders/1fEh7r93YifFRU3l93fywlnsInYL00vWC" target="_blank">Google Drive</a>, <a href="https://github.com/VladSTp/Business-card-generator" target="_blank">Git hub</a></p>
   </section>
     
   <footer role="contentinfo">
@@ -178,5 +187,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src\scripts\scripts.js"></script>
+
 </body>
 </html>
