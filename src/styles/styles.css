@@ -264,3 +264,102 @@ button:hover,
     font-size: 20px;
   }
 }
+
+
+/* Accessibility: Focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Accessibility: High contrast for better readability */
+body {
+  color: #1a1a1a;
+  background-color: #f4f4f4;
+}
+
+/* Buttons: Ensure contrast and visibility */
+button,
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:focus,
+.btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Inputs: improved accessibility */
+input,
+select,
+textarea {
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Images: Add alt text via HTML for accessibility */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  main,
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button,
+  .btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .card-preview {
+    padding: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  button,
+  .btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .card-template .card-header h2 {
+    font-size: 18px;
+  }
+
+  .card-template .card-body {
+    font-size: 13px;
+  }
+}
