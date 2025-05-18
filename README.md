@@ -179,16 +179,11 @@ src/
         scripts.js
 	styles/
 		styles.css   
-.eslintignore
-.eslintrc.json
 gitignore.txt   
-jsdoc.json
 LICENSE.txt
+README.md
 package-lock.json  
 package.json
-README.md
-robots.txt 
-sitemap.xml
 tsconfig.json      
 ```
 
