@@ -163,16 +163,33 @@ npm run docs
 
 ```
 Business-card-generator/
-public/
 src/
+    images/
+        favicon.ico
+        logo-sumdu.ico
+        og-image.jpg
+    public/
+        index.html
+    scripts/
+        tests/
+            downloadCard.test.js
+            generateCard.test.js
+            generateTemplateHTML.test.js
+            integration.test.js
+        scripts.js
 	styles/
-		scripts.js
-tests/
-	scripts.test.js
-docs/          
-	README.md
-	package.json
-	jsdoc.json        
+		styles.css   
+.eslintignore
+.eslintrc.json
+gitignore.txt   
+jsdoc.json
+LICENSE.txt
+package-lock.json  
+package.json
+README.md
+robots.txt 
+sitemap.xml
+tsconfig.json      
 ```
 
 ## Ліцензія
