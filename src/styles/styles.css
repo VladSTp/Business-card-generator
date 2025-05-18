@@ -27,8 +27,8 @@ h1 {
 h2 {
   margin-top: 30px;
   color: #006699;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 12px;
+  border-bottom: 4px solid #006699;
+  padding-bottom: 10px;
 }
 
 p, li {
@@ -150,91 +150,11 @@ button:hover,
 }
 
 /* Error message */
-.error-message {
-  color: red;
+.error-message  {
+  color: #db0000;
   font-size: 12px;
   margin-top: 5px;
   display: none;
-}
-
-/* Template variants */
-.card-template.template1 {
-  border: 1px solid #333;
-  padding: 15px;
-  background-color: #fff;
-  color: #000;
-}
-
-.card-template.template2 {
-  padding: 20px;
-  background-color: #f4f4f4;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-.card-template.template3 {
-  padding: 20px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-family: 'Verdana', sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-template.template4 {
-  border: 2px dashed #c47f2e;
-  padding: 15px;
-  background-color: #fffbea;
-  color: #4d2c1f;
-  font-family: 'Courier New', monospace;
-}
-
-.card-template.template5 {
-  border: 1px solid #000;
-  padding: 20px;
-  background-color: #222;
-  color: #fff;
-}
-
-.card-template.template6 {
-  border: 2px solid #3c763d;
-  padding: 15px;
-  background-color: #eafaf1;
-  color: #3c763d;
-  font-family: 'Georgia', serif;
-}
-
-.card-template.template7 {
-  border: 1px solid #444;
-  padding: 20px;
-  background: linear-gradient(45deg, #444, #222);
-  color: #bbb;
-  font-family: 'Impact', sans-serif;
-  text-transform: uppercase;
-}
-
-.card-template.template8 {
-  border: 1px solid #007bff;
-  padding: 20px;
-  background-color: #eef7ff;
-  color: #007bff;
-  font-family: 'Roboto Mono', monospace;
-}
-
-.card-template.template9 {
-  border: 1px solid #000;
-  padding: 20px;
-  background-color: #f5f5f5;
-  font-family: 'Times New Roman', serif;
-  font-style: italic;
-  color: #333;
-}
-
-.card-template.template10 {
-  border: 1px solid #000;
-  padding: 20px;
-  background: linear-gradient(180deg, #444, #222);
-  color: red;
-  text-transform: uppercase;
 }
 
 /* Utility */
@@ -264,7 +184,6 @@ button:hover,
     font-size: 20px;
   }
 }
-
 
 /* Accessibility: Focus styles */
 a:focus-visible,
@@ -362,4 +281,31 @@ textarea {
   .card-template .card-body {
     font-size: 13px;
   }
+}
+
+
+/* Card header with logo */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.card-logo {
+  width: 48px;
+  height: 48px;
+  margin-left: 10px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0;           /* Важливо: прибираємо зовнішній відступ */
+  padding: 0;          /* Також обнуляємо padding */
+  display: block;      /* Щоб прибрати inline-відступ */
+}
+
+.card-title p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
 }
