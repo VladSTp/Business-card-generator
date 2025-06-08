@@ -92,7 +92,6 @@ function generateTemplateHTML(name, surname, phone, email, age, position, depart
 	npm run docs
 
 
-
 ## Архітектура проєкту
 
 Проєкт має просту односторінкову архітектуру (SPA), реалізовану на HTML, CSS і JavaScript (без бекенда). Документація згенерована за допомогою JSDoc та розгорнута через GitHub Pages.
@@ -167,9 +166,8 @@ src/
     images/
         favicon.ico
         logo-sumdu.ico
+	logo-sumdu.png
         og-image.jpg
-    public/
-        index.html
     scripts/
         tests/
             downloadCard.test.js
@@ -178,10 +176,12 @@ src/
             integration.test.js
         scripts.js
 	styles/
-		styles.css   
+		styles.css
+		styles-card-template.css   
 gitignore.txt   
 LICENSE.txt
 README.md
+index.html
 package-lock.json  
 package.json
 tsconfig.json      
